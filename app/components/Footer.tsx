@@ -133,12 +133,12 @@ export default function Footer() {
             © {currentYear} SentraHex CyberTech. All rights reserved.
           </p>
           <div className="flex gap-6">
-            <a href="#" className="text-xs text-white/40 hover:text-white/60 transition-colors">
+            <Link href="/privacy-policy" className="text-xs text-white/40 hover:text-white/60 transition-colors">
               Privacy Policy
-            </a>
-            <a href="#" className="text-xs text-white/40 hover:text-white/60 transition-colors">
+            </Link>
+            <Link href="/terms-of-service" className="text-xs text-white/40 hover:text-white/60 transition-colors">
               Terms of Service
-            </a>
+            </Link>
           </div>
         </div>
       </div>
