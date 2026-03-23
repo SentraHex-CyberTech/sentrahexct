@@ -11,20 +11,44 @@ export default function ContactPage() {
     message: "",
   });
   const [submitted, setSubmitted] = useState(false);
+  const [submitting, setSubmitting] = useState(false);
+  const [error, setError] = useState("");
 
-  const handleSubmit = (e: FormEvent) => {
+  const handleSubmit = async (e: FormEvent) => {
     e.preventDefault();
-    setSubmitted(true);
-    // Client-side only for now
+    setSubmitting(true);
+    setError("");
+
+    try {
+      const response = await fetch("/api/contact", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(formData),
+      });
+
+      const result = await response.json();
+      if (!response.ok) {
+        setError(result?.error || "Unable to send your message right now.");
+        return;
+      }
+
+      setSubmitted(true);
+    } catch {
+      setError("Unable to send your message right now.");
+    } finally {
+      setSubmitting(false);
+    }
   };
 
   return (
     <>
       {/* ── Hero ──────────────────────────────────── */}
-      <section className="relative hero-gradient overflow-hidden pt-32 pb-24 -mb-px">
+      <section className="relative hero-gradient overflow-hidden pt-32 pb-24 -mb-px min-h-[70vh] flex items-center">
         <div className="absolute inset-0">
-          <div className="absolute top-20 right-20 w-96 h-96 rounded-full bg-accent-cyan/5 blur-3xl" />
-          <div className="absolute bottom-0 left-10 w-72 h-72 rounded-full bg-accent-green/5 blur-3xl" />
+          <div className="absolute top-20 right-20 w-96 h-96 rounded-full bg-accent-cyan/5 blur-3xl animate-float" />
+          <div className="absolute bottom-0 left-10 w-72 h-72 rounded-full bg-accent-green/5 blur-3xl animate-float delay-300" />
+          <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] rounded-full border border-white/[0.04]" />
+          <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[400px] h-[400px] rounded-full border border-white/[0.04]" />
           <div className="absolute inset-0" style={{
             backgroundImage: `radial-gradient(circle at 1px 1px, rgba(255,255,255,0.03) 1px, transparent 0)`,
             backgroundSize: '40px 40px'
@@ -32,15 +56,15 @@ export default function ContactPage() {
         </div>
         <div className="relative z-10 mx-auto max-w-7xl px-6">
           <div className="max-w-3xl">
-            <span className="inline-block text-xs font-semibold uppercase tracking-[0.2em] text-accent-cyan mb-4">
+            <span className="animate-fade-in-up inline-block text-xs font-semibold uppercase tracking-[0.2em] text-accent-cyan mb-4" style={{ animationFillMode: 'backwards' }}>
               Contact Us
             </span>
-            <h1 className="text-4xl font-bold text-white sm:text-5xl lg:text-6xl leading-tight">
+            <h1 className="animate-fade-in-up delay-100 text-4xl font-bold text-white sm:text-5xl lg:text-6xl leading-tight" style={{ animationFillMode: 'backwards' }}>
               Let&apos;s Secure Your
               <br />
               <span className="gradient-text">Digital Future</span>
             </h1>
-            <p className="mt-6 text-lg text-white/60 max-w-xl leading-relaxed">
+            <p className="animate-fade-in-up delay-200 mt-6 text-lg text-white/60 max-w-xl leading-relaxed" style={{ animationFillMode: 'backwards' }}>
               Have a question or need a cybersecurity assessment? Reach out and our
               team will get back to you within 24 hours.
             </p>
@@ -83,7 +107,7 @@ export default function ContactPage() {
                   </div>
                   <div>
                     <h4 className="text-sm font-semibold text-text-primary">Email</h4>
-                    <p className="text-sm text-text-secondary mt-0.5">contact@sentrahexct.in</p>
+                    <p className="text-sm text-text-secondary mt-0.5">sales@sentrahexct.in</p>
                   </div>
                 </div>
 
@@ -160,6 +184,11 @@ export default function ContactPage() {
                   </div>
                 ) : (
                   <form onSubmit={handleSubmit} className="relative space-y-6">
+                    {error ? (
+                      <div className="rounded-xl border border-red-200 bg-red-50 p-3 text-sm text-red-700">
+                        {error}
+                      </div>
+                    ) : null}
                     <div className="grid gap-6 sm:grid-cols-2">
                       <div>
                         <label htmlFor="name" className="block text-sm font-medium text-text-primary mb-2">
@@ -204,7 +233,8 @@ export default function ContactPage() {
                         <option value="" disabled>Select a service</option>
                         <option value="vapt">Penetration Testing (VAPT)</option>
                         <option value="audit">Security Audit & Compliance</option>
-                        <option value="training">Cybersecurity Training</option>
+                        {/* <option value="training">Cybersecurity Training</option> */}
+                        <option value="websites">Website Design & Development</option>
                         <option value="general">General Inquiry</option>
                       </select>
                     </div>
@@ -222,8 +252,8 @@ export default function ContactPage() {
                         placeholder="Tell us about your security needs..."
                       />
                     </div>
-                    <button type="submit" className="btn-primary w-full justify-center text-base !py-4">
-                      Send Message
+                    <button type="submit" disabled={submitting} className="btn-primary w-full justify-center text-base !py-4 disabled:opacity-70">
+                      {submitting ? "Sending..." : "Send Message"}
                       <svg className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="2">
                         <path strokeLinecap="round" strokeLinejoin="round" d="M12 19l9 2-9-18-9 18 9-2zm0 0v-8" />
                       </svg>
@@ -265,10 +295,10 @@ export default function ContactPage() {
                 q: "What compliance frameworks do you support?",
                 a: "We provide readiness assessments for ISO 27001, DPDPA, SOC 2, GDPR, HIPAA, and other industry-specific standards relevant to your business.",
               },
-              {
-                q: "Can training be delivered online?",
-                a: "Yes. We offer both in-person and virtual training sessions with hands-on labs and interactive exercises, making it accessible for distributed teams across India.",
-              },
+              // {
+              //   q: "Can training be delivered online?",
+              //   a: "Yes. We offer both in-person and virtual training sessions with hands-on labs and interactive exercises, making it accessible for distributed teams across India.",
+              // },
             ].map((faq, i) => (
               <div key={i} className="rounded-xl border border-border bg-surface p-6 card-hover">
                 <h3 className="text-base font-semibold text-text-primary mb-2">{faq.q}</h3>

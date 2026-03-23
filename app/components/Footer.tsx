@@ -8,12 +8,14 @@ export default function Footer() {
     { href: "/about", label: "About Us" },
     { href: "/services", label: "Services" },
     { href: "/contact", label: "Contact" },
+    { href: "/services/request", label: "Service Request" },
   ];
 
   const services = [
     { href: "/services#vapt", label: "Penetration Testing" },
     { href: "/services#audits", label: "Security Audits" },
-    { href: "/services#training", label: "Cyber Training" },
+    // { href: "/services#training", label: "Cyber Training" },
+    { href: "/services#websites", label: "Website Solutions" },
   ];
 
   return (
@@ -39,7 +41,7 @@ export default function Footer() {
               </div>
             </div>
             <p className="text-sm leading-relaxed text-white/60 max-w-xs">
-              Redefining digital defense with intelligent, kernel-level security systems.
+              Delivering practical digital security with focused, adaptive services.
               Rooted in India, built for the world.
             </p>
             {/* Social Icons */}
@@ -113,7 +115,7 @@ export default function Footer() {
                 <svg className="mt-0.5 h-4 w-4 shrink-0 text-accent-cyan" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="2">
                   <path strokeLinecap="round" strokeLinejoin="round" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
                 </svg>
-                contact@sentrahexct.in
+                sales@sentrahexct.in
               </li>
               <li className="flex items-start gap-2">
                 <svg className="mt-0.5 h-4 w-4 shrink-0 text-accent-cyan" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="2">

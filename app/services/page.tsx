@@ -2,19 +2,31 @@ import type { Metadata } from "next";
 import Link from "next/link";
 
 export const metadata: Metadata = {
-  title: "Services  SentraHex CyberTech",
+  title: "Cybersecurity Services | SentraHex CyberTech",
   description:
-    "Explore SentraHex CyberTech's cybersecurity services: Penetration Testing (VAPT), Security Audits & Compliance, and Cybersecurity Training.",
+    "Professional services: Penetration Testing, VAPT, Security Audits, Compliance Consulting, Cybersecurity Training, and Website Solutions.",
+  openGraph: {
+    title: "Cybersecurity Services | SentraHex CyberTech",
+    description:
+      "Expert cybersecurity services including penetration testing, security audits, and compliance consulting.",
+    url: "https://sentrahexct.in/services",
+    type: "website",
+  },
+  alternates: {
+    canonical: "https://sentrahexct.in/services",
+  },
 };
 
 export default function ServicesPage() {
   return (
     <>
       {/* ── Hero ──────────────────────────────────── */}
-      <section className="relative hero-gradient overflow-hidden pt-32 pb-24">
+      <section className="relative hero-gradient overflow-hidden pt-32 pb-24 min-h-[70vh] flex items-center">
         <div className="absolute inset-0">
-          <div className="absolute top-20 left-20 w-96 h-96 rounded-full bg-accent-cyan/5 blur-3xl" />
-          <div className="absolute bottom-0 right-10 w-72 h-72 rounded-full bg-accent-green/5 blur-3xl" />
+          <div className="absolute top-20 left-20 w-96 h-96 rounded-full bg-accent-cyan/5 blur-3xl animate-float" />
+          <div className="absolute bottom-0 right-10 w-72 h-72 rounded-full bg-accent-green/5 blur-3xl animate-float delay-300" />
+          <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] rounded-full border border-white/[0.04]" />
+          <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[400px] h-[400px] rounded-full border border-white/[0.04]" />
           <div className="absolute inset-0" style={{
             backgroundImage: `radial-gradient(circle at 1px 1px, rgba(255,255,255,0.03) 1px, transparent 0)`,
             backgroundSize: '40px 40px'
@@ -22,17 +34,17 @@ export default function ServicesPage() {
         </div>
         <div className="relative z-10 mx-auto max-w-7xl px-6">
           <div className="max-w-3xl">
-            <span className="inline-block text-xs font-semibold uppercase tracking-[0.2em] text-accent-cyan mb-4">
+            <span className="animate-fade-in-up inline-block text-xs font-semibold uppercase tracking-[0.2em] text-accent-cyan mb-4" style={{ animationFillMode: 'backwards' }}>
               Our Services
             </span>
-            <h1 className="text-4xl font-bold text-white sm:text-5xl lg:text-6xl leading-tight">
+            <h1 className="animate-fade-in-up delay-100 text-4xl font-bold text-white sm:text-5xl lg:text-6xl leading-tight" style={{ animationFillMode: 'backwards' }}>
               Comprehensive Cyber
               <br />
               <span className="gradient-text">Protection Suite</span>
             </h1>
-            <p className="mt-6 text-lg text-white/60 max-w-xl leading-relaxed">
+            <p className="animate-fade-in-up delay-200 mt-6 text-lg text-white/60 max-w-xl leading-relaxed" style={{ animationFillMode: 'backwards' }}>
               End-to-end cybersecurity services designed for Indian businesses  from
-              vulnerability assessments to compliance consulting and team training.
+              vulnerability assessments to compliance consulting, team training, and website solutions.
             </p>
           </div>
         </div>
@@ -89,6 +101,9 @@ export default function ServicesPage() {
                   <path strokeLinecap="round" strokeLinejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3" />
                 </svg>
               </Link>
+              <Link href="/services/request" className="btn-outline ml-3">
+                Start Service Request
+              </Link>
             </div>
 
             {/* Visual Card */}
@@ -136,7 +151,8 @@ export default function ServicesPage() {
                 <h3 className="text-xl font-bold text-text-primary mb-2">Compliance Framework</h3>
                 <p className="text-sm text-text-muted mb-6">Audit & Assessment</p>
                 <div className="flex flex-wrap justify-center gap-2">
-                  {["ISO 27001", "DPDPA", "SOC 2", "GDPR", "HIPAA"].map((tag) => (
+                  {["ISO 27001", "DPDPA"].map((tag) => (
+                    // "SOC 2", "GDPR", "HIPAA"
                     <span key={tag} className="rounded-full border border-accent-green/20 bg-accent-green/5 px-3 py-1 text-xs font-medium text-accent-green">
                       {tag}
                     </span>
@@ -185,12 +201,15 @@ export default function ServicesPage() {
                   <path strokeLinecap="round" strokeLinejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3" />
                 </svg>
               </Link>
+              <Link href="/services/request" className="btn-outline ml-3">
+                Start Service Request
+              </Link>
             </div>
           </div>
 
           <hr className="border-border" />
 
-          {/* ── 3. Cybersecurity Training ─────────── */}
+          {/* ── 3. Cybersecurity Training ───────────
           <div id="training" className="scroll-mt-24 grid gap-12 items-center lg:grid-cols-2">
             <div>
               <div className="inline-flex items-center gap-2 rounded-full border border-accent-cyan/20 bg-accent-cyan/5 px-4 py-1.5 mb-5">
@@ -232,10 +251,13 @@ export default function ServicesPage() {
                   <path strokeLinecap="round" strokeLinejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3" />
                 </svg>
               </Link>
+              <Link href="/services/request" className="btn-outline ml-3">
+                Start Service Request
+              </Link>
             </div>
 
             {/* Visual Card */}
-            <div className="rounded-2xl border border-border bg-surface p-8 relative overflow-hidden">
+            {/* <div className="rounded-2xl border border-border bg-surface p-8 relative overflow-hidden">
               <div className="absolute top-0 right-0 w-40 h-40 bg-gradient-to-bl from-accent-cyan/5 to-transparent rounded-bl-full" />
               <div className="relative flex flex-col items-center text-center py-8">
                 <div className="mb-6 flex h-24 w-24 items-center justify-center rounded-2xl bg-gradient-to-br from-accent-cyan/10 to-accent-green/10 animate-glow-pulse">
@@ -255,6 +277,84 @@ export default function ServicesPage() {
                   ].map((item) => (
                     <div key={item.label} className="rounded-xl bg-surface-alt p-3 text-center">
                       <div className="text-lg mb-1">{item.icon}</div>
+                      <div className="text-[11px] text-text-muted">{item.label}</div>
+                    </div>
+                  ))}
+                </div>
+              </div>
+            </div>
+          </div> */}
+
+          {/* <hr className="border-border" /> */}
+
+          {/* ── 4. Website Solutions ─────────────── */}
+          <div id="websites" className="scroll-mt-24 grid gap-12 items-center lg:grid-cols-2">
+            <div>
+              <div className="inline-flex items-center gap-2 rounded-full border border-accent-green/20 bg-accent-green/5 px-4 py-1.5 mb-5">
+                <span className="h-2 w-2 rounded-full bg-accent-green" />
+                <span className="text-xs font-medium text-accent-green">Service 03</span>
+              </div>
+              <h2 className="text-3xl font-bold text-text-primary sm:text-4xl mb-5">
+                Website
+                <br />
+                <span className="gradient-text">Design & Development</span>
+              </h2>
+              <p className="text-text-secondary leading-relaxed mb-6">
+                We build modern, high-performance websites tailored for your business goals.
+                Every build emphasizes speed, responsive UX, and security-first best practices.
+              </p>
+              <div className="space-y-4 mb-8">
+                {[
+                  "Business Websites and Landing Pages",
+                  "Responsive UI for Mobile, Tablet, and Desktop",
+                  "Performance Optimization and Core Web Vitals",
+                  "SEO-Friendly Structure and Technical Setup",
+                  "Secure Forms, Deployment, and Ongoing Maintenance",
+                  "CMS or Custom Stack Based on Your Needs",
+                ].map((item) => (
+                  <div key={item} className="flex items-start gap-3">
+                    <div className="mt-1 flex h-5 w-5 shrink-0 items-center justify-center rounded-full bg-accent-green/10">
+                      <svg className="h-3 w-3 text-accent-green" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="3">
+                        <path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" />
+                      </svg>
+                    </div>
+                    <span className="text-sm text-text-secondary">{item}</span>
+                  </div>
+                ))}
+              </div>
+              <Link href="/contact" className="btn-primary">
+                Start Your Website Project
+                <svg className="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="2">
+                  <path strokeLinecap="round" strokeLinejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3" />
+                </svg>
+              </Link>
+              <Link href="/services/request" className="btn-outline ml-3">
+                Start Service Request
+              </Link>
+            </div>
+
+            <div className="rounded-2xl border border-border bg-surface p-8 relative overflow-hidden">
+              <div className="absolute top-0 right-0 w-40 h-40 bg-gradient-to-bl from-accent-green/5 to-transparent rounded-bl-full" />
+              <div className="relative flex flex-col items-center text-center py-8">
+                <div className="mb-6 flex h-24 w-24 items-center justify-center rounded-2xl bg-gradient-to-br from-accent-green/10 to-accent-cyan/10 animate-glow-pulse">
+                  <svg className="h-12 w-12 text-accent-green" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="1.5">
+                    <path strokeLinecap="round" strokeLinejoin="round" d="M21 12.79V6a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2h7" />
+                    <path strokeLinecap="round" strokeLinejoin="round" d="M3 10h18" />
+                    <path strokeLinecap="round" strokeLinejoin="round" d="M8 6h.01M12 6h.01" />
+                    <path strokeLinecap="round" strokeLinejoin="round" d="M18 18l3 3" />
+                    <path strokeLinecap="round" strokeLinejoin="round" d="M16.5 21a4.5 4.5 0 100-9 4.5 4.5 0 000 9z" />
+                  </svg>
+                </div>
+                <h3 className="text-xl font-bold text-text-primary mb-2">Website Solutions</h3>
+                <p className="text-sm text-text-muted mb-6">Design, Build & Scale</p>
+                <div className="grid grid-cols-2 gap-3 w-full max-w-xs">
+                  {[
+                    { label: "Responsive" },
+                    { label: "SEO-Ready" },
+                    { label: "Fast" },
+                    { label: "Secure" },
+                  ].map((item) => (
+                    <div key={item.label} className="rounded-xl bg-surface-alt p-3 text-center">
                       <div className="text-[11px] text-text-muted">{item.label}</div>
                     </div>
                   ))}
@@ -343,6 +443,9 @@ export default function ServicesPage() {
             <svg className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="2">
               <path strokeLinecap="round" strokeLinejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3" />
             </svg>
+          </Link>
+          <Link href="/services/request" className="btn-outline text-lg !py-4 !px-8 mt-4 inline-flex">
+            Submit Service Scope
           </Link>
         </div>
       </section>

@@ -1,19 +1,31 @@
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "About Us  SentraHex CyberTech",
+  title: "About Us | SentraHex CyberTech",
   description:
-    "Learn about SentraHex CyberTech's mission to redefine cybersecurity from India with intelligent, kernel-level defense systems.",
+    "Learn about SentraHex CyberTech's mission to deliver practical cybersecurity services from India.",
+  openGraph: {
+    title: "About Us | SentraHex CyberTech",
+    description:
+      "Discover our mission: practical cybersecurity services built from India.",
+    url: "https://sentrahexct.in/about",
+    type: "website",
+  },
+  alternates: {
+    canonical: "https://sentrahexct.in/about",
+  },
 };
 
 export default function AboutPage() {
   return (
     <>
       {/* ── Hero ──────────────────────────────────── */}
-      <section className="relative hero-gradient overflow-hidden pt-32 pb-24 -mb-px">
+      <section className="relative hero-gradient overflow-hidden pt-32 pb-24 -mb-px min-h-[70vh] flex items-center">
         <div className="absolute inset-0">
-          <div className="absolute top-20 right-20 w-96 h-96 rounded-full bg-accent-cyan/5 blur-3xl" />
-          <div className="absolute bottom-0 left-10 w-72 h-72 rounded-full bg-accent-green/5 blur-3xl" />
+          <div className="absolute top-20 right-20 w-96 h-96 rounded-full bg-accent-cyan/5 blur-3xl animate-float" />
+          <div className="absolute bottom-0 left-10 w-72 h-72 rounded-full bg-accent-green/5 blur-3xl animate-float delay-300" />
+          <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] rounded-full border border-white/[0.04]" />
+          <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[400px] h-[400px] rounded-full border border-white/[0.04]" />
           <div className="absolute inset-0" style={{
             backgroundImage: `radial-gradient(circle at 1px 1px, rgba(255,255,255,0.03) 1px, transparent 0)`,
             backgroundSize: '40px 40px'
@@ -21,15 +33,15 @@ export default function AboutPage() {
         </div>
         <div className="relative z-10 mx-auto max-w-7xl px-6">
           <div className="max-w-3xl">
-            <span className="inline-block text-xs font-semibold uppercase tracking-[0.2em] text-accent-cyan mb-4">
+            <span className="animate-fade-in-up inline-block text-xs font-semibold uppercase tracking-[0.2em] text-accent-cyan mb-4" style={{ animationFillMode: 'backwards' }}>
               About SentraHex
             </span>
-            <h1 className="text-4xl font-bold text-white sm:text-5xl lg:text-6xl leading-tight">
+            <h1 className="animate-fade-in-up delay-100 text-4xl font-bold text-white sm:text-5xl lg:text-6xl leading-tight" style={{ animationFillMode: 'backwards' }}>
               Redefining Digital
               <br />
               <span className="gradient-text">Defense from India</span>
             </h1>
-            <p className="mt-6 text-lg text-white/60 max-w-xl leading-relaxed">
+            <p className="animate-fade-in-up delay-200 mt-6 text-lg text-white/60 max-w-xl leading-relaxed" style={{ animationFillMode: 'backwards' }}>
               On a mission to make cybersecurity personal, proactive, and as fundamental
               as healthcare in the digital age.
             </p>
@@ -63,8 +75,8 @@ export default function AboutPage() {
                 </p>
                 <p>
                   In a world where cyber threats are rapidly evolving, we&apos;re building
-                  intelligent, kernel-level defense systems that don&apos;t just detect
-                  they adapt, learn, and respond in real time.
+                  practical security capabilities that identify risk early,
+                  strengthen defenses, and support faster response.
                 </p>
                 <p>
                   We believe cybersecurity shouldn&apos;t be reactive, complicated, or reserved
@@ -78,7 +90,7 @@ export default function AboutPage() {
                 </p>
                 <p>
                   While we begin with cybersecurity as our core, our vision expands far
-                  beyond  into a future where intelligent, evolving systems secure not just
+                  beyond  into a future where reliable, evolving solutions secure not just
                   individuals but the entire digital ecosystem.
                 </p>
               </div>
@@ -108,7 +120,7 @@ export default function AboutPage() {
                   </div>
                   {/* Corner badges */}
                   <div className="absolute top-6 left-6 rounded-lg bg-accent-cyan/10 px-3 py-1.5 text-xs font-semibold text-accent-cyan">
-                    Kernel-Level
+                    Adaptive
                   </div>
                   <div className="absolute bottom-6 right-6 rounded-lg bg-accent-green/10 px-3 py-1.5 text-xs font-semibold text-accent-green">
                     Real-Time
@@ -169,7 +181,7 @@ export default function AboutPage() {
                 <h3 className="text-2xl font-bold text-text-primary mb-4">Our Vision</h3>
                 <p className="text-text-secondary leading-relaxed text-lg">
                   To ignite a cybersecurity-first mindset across India by making defense intuitive,
-                  intelligent, and deeply integrated  laying the foundation for a safer digital
+                  practical, and deeply integrated  laying the foundation for a safer digital
                   future powered by evolving technology.
                 </p>
               </div>
@@ -199,7 +211,7 @@ export default function AboutPage() {
                   </svg>
                 ),
                 title: "Innovation",
-                desc: "Pushing boundaries with kernel-level intelligence and adaptive defense.",
+                desc: "Pushing boundaries with practical security and adaptive defense.",
               },
               {
                 icon: (
@@ -258,7 +270,7 @@ export default function AboutPage() {
           </h2>
           <p className="text-lg text-white/60 max-w-2xl mx-auto leading-relaxed">
             India has always been a land of innovation and resilience. We carry that spirit
-            into everything we build  from our intelligent defense algorithms to our
+            into everything we build  from our practical security approach to our
             commitment to making cybersecurity accessible to every Indian citizen. Our
             solutions are designed to protect digital sovereignty and establish a new
             benchmark for digital safety.

@@ -1,4 +1,21 @@
 import Link from "next/link";
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "SentraHex CyberTech | Cybersecurity Services",
+  description:
+    "Cybersecurity services including penetration testing, audits, and website security for Indian enterprises.",
+  openGraph: {
+    title: "SentraHex CyberTech | Cybersecurity Services",
+    description:
+      "Practical cybersecurity services for prevention, assessment, and response.",
+    url: "https://sentrahexct.in",
+    type: "website",
+  },
+  alternates: {
+    canonical: "https://sentrahexct.in",
+  },
+};
 
 export default function Home() {
   return (
@@ -28,15 +45,15 @@ export default function Home() {
               </div>
 
               <h1 className="animate-fade-in-up delay-100 text-4xl font-bold leading-[1.1] tracking-tight text-white sm:text-5xl lg:text-6xl" style={{ animationFillMode: 'backwards' }}>
-                Intelligent Defense
+                Practical Security
                 <br />
                 <span className="gradient-text">for the Digital Age</span>
               </h1>
 
               <p className="animate-fade-in-up delay-200 mt-8 max-w-lg text-base sm:text-lg leading-relaxed text-white/60" style={{ animationFillMode: 'backwards' }}>
-                We build kernel-level defense systems that don&apos;t just detect threats
-                they adapt, learn, and respond in real time. Cybersecurity made personal,
-                proactive, and deeply embedded.
+                We provide focused cybersecurity services to identify risk, strengthen
+                your controls, and improve response readiness. Cybersecurity made practical,
+                proactive, and accessible.
               </p>
 
               <div className="animate-fade-in-up delay-300 mt-10 flex flex-wrap gap-4" style={{ animationFillMode: 'backwards' }}>
@@ -117,17 +134,32 @@ export default function Home() {
                   "Comprehensive ISO 27001 and DPDPA readiness assessments to ensure your organization meets compliance standards.",
                 href: "/services#audits",
               },
+              // {
+              //   icon: (
+              //     <svg className="h-7 w-7" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="1.5">
+              //       <path strokeLinecap="round" strokeLinejoin="round" d="M12 14l9-5-9-5-9 5 9 5z" />
+              //       <path strokeLinecap="round" strokeLinejoin="round" d="M12 14l6.16-3.422a12.083 12.083 0 01.665 6.479A11.952 11.952 0 0012 20.055a11.952 11.952 0 00-6.824-2.998 12.078 12.078 0 01.665-6.479L12 14z" />
+              //     </svg>
+              //   ),
+              //   title: "Cyber Training",
+              //   description:
+              //     "Hands-on workshops in ethical hacking, CEH certification, and cybersecurity awareness for teams of any size.",
+              //   href: "/services#training",
+              // },
               {
                 icon: (
                   <svg className="h-7 w-7" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="1.5">
-                    <path strokeLinecap="round" strokeLinejoin="round" d="M12 14l9-5-9-5-9 5 9 5z" />
-                    <path strokeLinecap="round" strokeLinejoin="round" d="M12 14l6.16-3.422a12.083 12.083 0 01.665 6.479A11.952 11.952 0 0012 20.055a11.952 11.952 0 00-6.824-2.998 12.078 12.078 0 01.665-6.479L12 14z" />
+                    <path strokeLinecap="round" strokeLinejoin="round" d="M21 12.79V6a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2h7" />
+                    <path strokeLinecap="round" strokeLinejoin="round" d="M3 10h18" />
+                    <path strokeLinecap="round" strokeLinejoin="round" d="M8 6h.01M12 6h.01" />
+                    <path strokeLinecap="round" strokeLinejoin="round" d="M18 18l3 3" />
+                    <path strokeLinecap="round" strokeLinejoin="round" d="M16.5 21a4.5 4.5 0 100-9 4.5 4.5 0 000 9z" />
                   </svg>
                 ),
-                title: "Cyber Training",
+                title: "Website Solutions",
                 description:
-                  "Hands-on workshops in ethical hacking, CEH certification, and cybersecurity awareness for teams of any size.",
-                href: "/services#training",
+                  "Secure website design and development with performance, reliability, and security-first engineering.",
+                href: "/services#websites",
               },
             ].map((service, i) => (
               <Link
@@ -171,17 +203,17 @@ export default function Home() {
                 <span className="gradient-text">With Every Threat</span>
               </h2>
               <p className="text-text-secondary leading-relaxed mb-8">
-                In a world where cyber threats are rapidly evolving, we&apos;re building intelligent,
-                kernel-level defense systems that don&apos;t just detect  they adapt, learn, and
-                respond in real time. We believe cybersecurity should be personal, proactive, and
+                In a world where cyber threats are rapidly evolving, we help organizations
+                identify vulnerabilities, improve security posture, and respond faster.
+                We believe cybersecurity should be personal, proactive, and
                 as fundamental as healthcare in the digital age.
               </p>
 
               <div className="space-y-6">
                 {[
                   {
-                    title: "Adaptive Intelligence",
-                    desc: "Our systems learn from every interaction, continuously strengthening your defenses.",
+                    title: "Practical Expertise",
+                    desc: "Our team applies proven security practices tailored to your real-world environment.",
                   },
                   {
                     title: "Proactive Defense",
@@ -283,7 +315,7 @@ export default function Home() {
                 <h3 className="text-2xl font-bold text-text-primary mb-4">Our Vision</h3>
                 <p className="text-text-secondary leading-relaxed">
                   To ignite a cybersecurity-first mindset across India by making defense intuitive,
-                  intelligent, and deeply integrated  laying the foundation for a safer digital
+                  practical, and deeply integrated  laying the foundation for a safer digital
                   future powered by evolving technology.
                 </p>
               </div>
