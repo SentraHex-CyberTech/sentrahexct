@@ -111,7 +111,7 @@ export default function ContactPage() {
                   </div>
                 </div>
 
-                {/* Phone */}
+                {/* Phone
                 <div className="flex items-start gap-4">
                   <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-xl bg-accent-green/10">
                     <svg className="h-5 w-5 text-accent-green" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="1.5">
@@ -123,6 +123,7 @@ export default function ContactPage() {
                     <p className="text-sm text-text-secondary mt-0.5">+91-XXXXX-XXXXX</p>
                   </div>
                 </div>
+                */}
 
                 {/* Location */}
                 <div className="flex items-start gap-4">

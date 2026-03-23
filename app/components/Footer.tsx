@@ -9,6 +9,8 @@ export default function Footer() {
     { href: "/services", label: "Services" },
     { href: "/contact", label: "Contact" },
     { href: "/services/request", label: "Service Request" },
+    { href: "/privacy-policy", label: "Privacy Policy" },
+    { href: "/terms-of-service", label: "Terms of Service" },
   ];
 
   const services = [
@@ -26,11 +28,7 @@ export default function Footer() {
           {/* Brand */}
           <div className="lg:col-span-1">
             <div className="flex items-center gap-2 mb-5">
-              <div className="flex h-10 w-10 items-center justify-center rounded-xl bg-gradient-to-br from-accent-cyan to-accent-green">
-                <svg viewBox="0 0 24 24" className="h-5 w-5 text-primary" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
-                  <path d="M12 2L3 7v6c0 5.25 3.83 10.13 9 11.25C17.17 23.13 21 18.25 21 13V7l-9-5z" />
-                </svg>
-              </div>
+              <img src="/favicon.ico" alt="SentraHex logo" className="h-10 w-10 object-contain" />
               <div className="flex flex-col leading-none">
                 <span className="text-lg font-bold tracking-tight text-white">
                   Sentra<span className="text-accent-cyan">Hex</span>
