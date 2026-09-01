@@ -1,0 +1,24 @@
+# SentraHex CyberTech
+
+SentraHex CyberTech helps organizations in India implement practical governance, risk, and compliance programs, including ISO/IEC 27001 ISMS, ISO/IEC 42001 AIMS, DPDPA compliance, policy development, and professional website development.
+
+## Core services
+- ISO/IEC 27001 ISMS implementation support
+- ISO/IEC 42001 AI governance and management system support
+- DPDPA compliance and privacy governance support
+- Policy development and compliance documentation
+- Professional website development for businesses and organizations
+
+## Website
+- https://sentrahexct.in/
+- https://sentrahexct.in/grc
+- https://sentrahexct.in/grc/isms
+- https://sentrahexct.in/grc/aims
+- https://sentrahexct.in/grc/dpdpa
+- https://sentrahexct.in/grc/policies
+- https://sentrahexct.in/web-development
+- https://sentrahexct.in/contact
+
+## Contact
+- sales@sentrahexct.in
+- https://sentrahexct.in/contact

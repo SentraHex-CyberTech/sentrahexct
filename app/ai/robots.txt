@@ -4,7 +4,6 @@ Disallow: /admin/
 Disallow: /api/
 Disallow: /_next/
 
-# AI content access signals
 User-agent: GPTBot
 Allow: /
 Disallow: /admin/
@@ -20,15 +19,4 @@ Allow: /
 Disallow: /admin/
 Disallow: /api/
 
-User-agent: CCBot
-Allow: /
-Disallow: /admin/
-Disallow: /api/
-
-User-agent: commoncrawl
-Allow: /
-Disallow: /admin/
-Disallow: /api/
-
-Content-Signal: public
 Sitemap: https://sentrahexct.in/sitemap.xml
