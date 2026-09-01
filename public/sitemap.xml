@@ -46,6 +46,16 @@
     <priority>0.6</priority>
   </url>
   <url>
+    <loc>https://sentrahexct.in/grc/dpdpa</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://sentrahexct.in/grc/policies</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
     <loc>https://sentrahexct.in/web-development</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>

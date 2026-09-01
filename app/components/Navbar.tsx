@@ -9,6 +9,8 @@ const grcLinks = [
   { href: "/grc/isms", label: "ISMS", code: "ISO/IEC 27001", comingSoon: false },
   { href: "/grc/aims", label: "AIMS", code: "ISO/IEC 42001", comingSoon: false },
   { href: "/grc/pims", label: "PIMS", code: "ISO/IEC 27701", comingSoon: true },
+  { href: "/grc/dpdpa", label: "DPDPA", code: "India Compliance", comingSoon: false },
+  { href: "/grc/policies", label: "Policies", code: "Policy Creation", comingSoon: false },
 ];
 
 const mainLinks = [
