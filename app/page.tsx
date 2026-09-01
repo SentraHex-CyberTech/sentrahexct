@@ -2,9 +2,17 @@ import Link from "next/link";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "GRC, ISO 27001 & AI Governance Consulting",
+  title: "SentraHex CyberTech | GRC Consulting",
   description:
-    "SentraHex CyberTech provides practical GRC consulting: ISO/IEC 27001 ISMS, ISO/IEC 42001 AIMS, and professional website development for businesses in India.",
+    "SentraHex CyberTech provides practical GRC consulting: ISO/IEC 27001 ISMS, ISO/IEC 42001 AIMS, DPDPA compliance, and professional website development for businesses in India.",
+  keywords: [
+    "GRC consulting India",
+    "ISO 27001 consultant",
+    "AI governance consulting",
+    "DPDPA compliance",
+    "website development India",
+    "information security consulting",
+  ],
   alternates: { canonical: "https://sentrahexct.in" },
 };
 
@@ -55,8 +63,40 @@ export default function Home() {
     { n: "05", title: "Improve", desc: "Support continual improvement and ongoing compliance." },
   ];
 
+  const faqSchema = {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    mainEntity: [
+      {
+        "@type": "Question",
+        name: "What does SentraHex CyberTech do?",
+        acceptedAnswer: {
+          "@type": "Answer",
+          text: "SentraHex CyberTech helps organizations implement practical governance, risk, and compliance frameworks, including ISO/IEC 27001 ISMS, ISO/IEC 42001 AIMS, DPDPA compliance, and professional business websites.",
+        },
+      },
+      {
+        "@type": "Question",
+        name: "Do you work with businesses in India?",
+        acceptedAnswer: {
+          "@type": "Answer",
+          text: "Yes. SentraHex CyberTech supports organizations in India with standards-based GRC consulting, compliance readiness, and digital presence work.",
+        },
+      },
+      {
+        "@type": "Question",
+        name: "What services does SentraHex offer?",
+        acceptedAnswer: {
+          "@type": "Answer",
+          text: "We provide ISO 27001 implementation support, AI governance consulting, DPDPA compliance services, policy development, and website development for businesses that need a credible online presence.",
+        },
+      },
+    ],
+  };
+
   return (
     <>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
       {/* ── Hero ───────────────────────────── */}
       <section className="relative bg-hero-bg min-h-[92vh] flex items-center overflow-hidden">
         {/* Subtle grid */}

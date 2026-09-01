@@ -2,8 +2,9 @@ import type { Metadata } from "next";
 import Link from "next/link";
 
 export const metadata: Metadata = {
-  title: "GRC Services Governance, Risk & Compliance",
-  description: "SentraHex CyberTech provides practical GRC services: ISO/IEC 27001 ISMS, ISO/IEC 42001 AIMS, and ISO/IEC 27701 PIMS. Helping organizations implement management systems that work.",
+  title: "GRC Services | Governance, Risk & Compliance in India",
+  description: "SentraHex CyberTech provides practical GRC services including ISO/IEC 27001 ISMS, ISO/IEC 42001 AIMS, DPDPA compliance, policy development, and governance support for growing organizations.",
+  keywords: ["GRC services India", "ISO 27001 ISMS", "AI governance services", "DPDPA compliance support", "policy development services"],
 };
 
 export default function GRCPage() {

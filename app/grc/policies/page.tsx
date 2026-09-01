@@ -48,7 +48,7 @@ export default function PoliciesPage() {
                   We develop practical policies that are actually useful: clear about what people should do, based on your actual processes, and aligned with your compliance obligations.
                 </p>
                 <p>
-                  Every policy is customized to your organization—your size, industry, technology, and risk environment.
+                  Every policy is customized to your organization size, industry, technology, and risk environment.
                 </p>
               </div>
             </div>
