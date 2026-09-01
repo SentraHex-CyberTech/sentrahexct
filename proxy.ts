@@ -4,6 +4,13 @@ import { getToken } from "next-auth/jwt";
 
 export async function proxy(request: NextRequest) {
   const pathname = request.nextUrl.pathname;
+  const acceptHeader = request.headers.get("accept") ?? "";
+  const wantsMarkdown = /text\/markdown/i.test(acceptHeader);
+
+  if (pathname === "/" && wantsMarkdown) {
+    return NextResponse.rewrite(new URL("/api/markdown-home", request.url));
+  }
+
   const isPublicAdminRoute =
     pathname.startsWith("/admin/login") || pathname.startsWith("/admin/register");
 
@@ -26,5 +33,5 @@ export async function proxy(request: NextRequest) {
 }
 
 export const config = {
-  matcher: ["/admin/:path*"],
+  matcher: ["/", "/admin/:path*"],
 };
