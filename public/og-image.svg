@@ -1,0 +1,32 @@
+<svg width="1200" height="630" viewBox="0 0 1200 630" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="1200" height="630" fill="#07111F"/>
+  <rect width="1200" height="630" fill="url(#paint0_radial)"/>
+  <g opacity="0.18">
+    <path d="M0 530H1200" stroke="#8CD7FF" stroke-width="1"/>
+    <path d="M120 0V630" stroke="#8CD7FF" stroke-width="1"/>
+    <path d="M240 0V630" stroke="#8CD7FF" stroke-width="1"/>
+    <path d="M360 0V630" stroke="#8CD7FF" stroke-width="1"/>
+    <path d="M480 0V630" stroke="#8CD7FF" stroke-width="1"/>
+    <path d="M600 0V630" stroke="#8CD7FF" stroke-width="1"/>
+    <path d="M720 0V630" stroke="#8CD7FF" stroke-width="1"/>
+    <path d="M840 0V630" stroke="#8CD7FF" stroke-width="1"/>
+    <path d="M960 0V630" stroke="#8CD7FF" stroke-width="1"/>
+  </g>
+  <rect x="90" y="90" width="240" height="56" rx="12" fill="#0B1D33" stroke="#7DD3FC"/>
+  <text x="110" y="128" fill="#CFEFFF" font-family="Arial, Helvetica, sans-serif" font-size="28" font-weight="700">SentraHex</text>
+  <text x="90" y="250" fill="#EAF7FF" font-family="Arial, Helvetica, sans-serif" font-size="74" font-weight="700">Build.</text>
+  <text x="90" y="330" fill="#EAF7FF" font-family="Arial, Helvetica, sans-serif" font-size="74" font-weight="700">Govern.</text>
+  <text x="90" y="410" fill="#EAF7FF" font-family="Arial, Helvetica, sans-serif" font-size="74" font-weight="700">Comply.</text>
+  <text x="90" y="500" fill="#A8C6DC" font-family="Arial, Helvetica, sans-serif" font-size="30">GRC consulting • AI governance • Website development</text>
+  <rect x="760" y="150" width="340" height="220" rx="28" fill="#0F223D" stroke="#1D4ED8" stroke-opacity="0.45"/>
+  <text x="800" y="230" fill="#7DD3FC" font-family="Arial, Helvetica, sans-serif" font-size="24" font-weight="700">Core services</text>
+  <text x="800" y="280" fill="#EAF7FF" font-family="Arial, Helvetica, sans-serif" font-size="38" font-weight="700">ISMS</text>
+  <text x="800" y="330" fill="#EAF7FF" font-family="Arial, Helvetica, sans-serif" font-size="38" font-weight="700">AIMS</text>
+  <text x="800" y="380" fill="#EAF7FF" font-family="Arial, Helvetica, sans-serif" font-size="38" font-weight="700">DPDPA</text>
+  <defs>
+    <radialGradient id="paint0_radial" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(920 120) rotate(122.712) scale(620 1060)">
+      <stop stop-color="#0F2D4F"/>
+      <stop offset="1" stop-color="#07111F"/>
+    </radialGradient>
+  </defs>
+</svg>

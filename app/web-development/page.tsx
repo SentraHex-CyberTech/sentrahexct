@@ -2,8 +2,9 @@ import type { Metadata } from "next";
 import Link from "next/link";
 
 export const metadata: Metadata = {
-  title: "Website Development Professional Business Websites",
-  description: "SentraHex builds professional, responsive websites for businesses and organizations. Business websites, corporate sites, landing pages, portfolio sites, and website redesigns.",
+  title: "Website Development in India | Business Websites & Corporate Sites",
+  description: "SentraHex builds professional, responsive business websites, corporate websites, landing pages, and redesigns for organizations that need a credible online presence in India.",
+  keywords: ["website development India", "business website design", "corporate website development", "landing page design India"],
 };
 
 export default function WebDevPage() {

@@ -54,12 +54,14 @@ export default function DPDPAPage() {
             </div>
             <div className="space-y-4">
               {[
-                { icon: "📋", title: "Key Requirements", desc: "Consent mechanisms, purpose limitation, data subject rights, security controls, breach notification." },
-                { icon: "🛡️", title: "Data Processing", desc: "Personal data handling, processing lawfulness, legitimate purpose clarification, retention limits." },
-                { icon: "📊", title: "Accountability", desc: "Documentation, impact assessments, data inventory, processing records, audit trails." },
+                { title: "Key Requirements", desc: "Consent mechanisms, purpose limitation, data subject rights, security controls, breach notification." },
+                { title: "Data Processing", desc: "Personal data handling, processing lawfulness, legitimate purpose clarification, retention limits." },
+                { title: "Accountability", desc: "Documentation, impact assessments, data inventory, processing records, audit trails." },
               ].map((item) => (
                 <div key={item.title} className="card p-5 flex gap-4">
-                  <span className="text-2xl shrink-0">{item.icon}</span>
+                  <div className="h-5 w-5 rounded bg-accent-subtle flex items-center justify-center shrink-0 mt-0.5">
+                  <div className="h-1.5 w-1.5 rounded-full bg-accent" />
+                </div>
                   <div>
                     <h3 className="text-sm font-semibold text-text-primary mb-1">{item.title}</h3>
                     <p className="text-sm text-text-secondary leading-relaxed">{item.desc}</p>

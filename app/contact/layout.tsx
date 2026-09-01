@@ -1,8 +1,9 @@
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Contact",
-  description: "Contact SentraHex CyberTech to discuss GRC services (ISMS, AIMS, PIMS) or website development. Based in India.",
+  title: "Contact SentraHex CyberTech | GRC & Website Consultation",
+  description: "Contact SentraHex CyberTech to discuss ISO 27001 ISMS, ISO 42001 AIMS, DPDPA compliance, governance support, or professional website development in India.",
+  keywords: ["contact SentraHex", "GRC consulting contact", "website development inquiry", "ISO 27001 consultation"],
 };
 
 export default function ContactLayout({ children }: { children: React.ReactNode }) {

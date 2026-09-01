@@ -2,8 +2,9 @@ import type { Metadata } from "next";
 import Link from "next/link";
 
 export const metadata: Metadata = {
-  title: "About SentraHex CyberTech",
-  description: "SentraHex CyberTech is an Indian organization helping businesses implement practical GRC management systems and build professional digital experiences. Learn about our focus and approach.",
+  title: "About SentraHex CyberTech | GRC & Digital Solutions in India",
+  description: "Learn about SentraHex CyberTech, an Indian consulting firm helping businesses implement ISO 27001, AI governance, DPDPA compliance, and professional websites with practical delivery.",
+  keywords: ["about SentraHex CyberTech", "GRC consulting firm", "AI governance company India", "ISO 27001 consulting"],
 };
 
 export default function AboutPage() {
@@ -57,6 +58,8 @@ export default function AboutPage() {
                   {[
                     { label: "ISMS", sub: "ISO/IEC 27001 Information Security Management", href: "/grc/isms" },
                     { label: "AIMS", sub: "ISO/IEC 42001 AI Management System", href: "/grc/aims" },
+                    { label: "DPDPA", sub: "Digital Personal Data Protection Act", href: "/grc/dpdpa" },
+                    { label: "Policies", sub: "Governance & compliance documentation", href: "/grc/policies" },
                     { label: "PIMS", sub: "ISO/IEC 27701 Coming Soon", href: "/grc/pims", soon: true },
                     { label: "Web Development", sub: "Professional business websites", href: "/web-development" },
                   ].map((s) => (
