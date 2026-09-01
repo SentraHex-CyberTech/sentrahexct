@@ -11,8 +11,12 @@ export async function proxy(request: NextRequest) {
     return NextResponse.rewrite(new URL("/api/markdown-home", request.url));
   }
 
+  if (pathname !== "/admin" && !pathname.startsWith("/admin/")) {
+    return NextResponse.next();
+  }
+
   const isPublicAdminRoute =
-    pathname.startsWith("/admin/login") || pathname.startsWith("/admin/register");
+    pathname === "/admin/login" || pathname === "/admin/register" || pathname.startsWith("/admin/login/") || pathname.startsWith("/admin/register/");
 
   const token = await getToken({
     req: request,
@@ -33,5 +37,5 @@ export async function proxy(request: NextRequest) {
 }
 
 export const config = {
-  matcher: ["/", "/admin/:path*"],
+  matcher: ["/", "/admin", "/admin/:path*"],
 };
