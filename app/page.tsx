@@ -19,8 +19,8 @@ export default function Home() {
       desc: "AI Management System", comingSoon: false,
     },
     {
-      href: "/grc/pims", code: "ISO/IEC 27701", name: "PIMS",
-      desc: "Privacy Information Management System", comingSoon: true,
+      href: "/grc/dpdpa", code: "India Compliance", name: "DPDPA",
+      desc: "Digital Personal Data Protection Act", comingSoon: false,
     },
     {
       href: "/web-development", code: "Digital", name: "Web Development",
@@ -142,7 +142,8 @@ export default function Home() {
             {[
               { label: "ISMS", sub: "ISO/IEC 27001", href: "/grc/isms", soon: false },
               { label: "AIMS", sub: "ISO/IEC 42001", href: "/grc/aims", soon: false },
-              { label: "PIMS", sub: "ISO/IEC 27701", href: "/grc/pims", soon: true },
+              { label: "DPDPA", sub: "India Compliance", href: "/grc/dpdpa", soon: false },
+              { label: "Policies", sub: "Compliance", href: "/grc/policies", soon: false },
               { label: "Website Development", sub: "Digital", href: "/web-development", soon: false },
             ].map((s) => (
               <Link
@@ -192,12 +193,13 @@ export default function Home() {
               {[
                 { href: "/grc/isms", label: "ISMS", code: "ISO/IEC 27001", desc: "Establish, implement and continually improve an information security management system.", soon: false },
                 { href: "/grc/aims", label: "AIMS", code: "ISO/IEC 42001", desc: "Implement responsible AI governance aligned with the emerging international standard.", soon: false },
-                { href: "/grc/pims", label: "PIMS", code: "ISO/IEC 27701 Coming Soon", desc: "Extend your ISMS to include a privacy information management system.", soon: true },
+                { href: "/grc/dpdpa", label: "DPDPA", code: "India Compliance", desc: "Implement DPDPA 2023 compliance framework, data protection controls, and privacy governance.", soon: false },
+                { href: "/grc/policies", label: "Policies", code: "Policy Development", desc: "Custom governance and compliance policies for ISO 27001, ISO 42001, DPDPA, and more.", soon: false },
               ].map((s) => (
                 <Link
                   key={s.label}
                   href={s.href}
-                  className={`card p-5 block ${s.soon ? "opacity-60 pointer-events-none" : ""} ${s.label === "ISMS" ? "sm:col-span-2 lg:col-span-1" : ""}`}
+                  className={`card p-5 block ${s.soon ? "opacity-60 pointer-events-none" : ""}`}
                 >
                   <div className="flex items-start justify-between mb-3">
                     <span className="label">{s.label}</span>

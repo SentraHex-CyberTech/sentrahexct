@@ -41,15 +41,9 @@ export default function AdminLoginPage() {
   };
 
   return (
-    <>
-      <style jsx global>{`
-        body footer {
-          display: none !important;
-        }
-      `}</style>
-      <section className="section-padding bg-background pt-32">
-        <div className="mx-auto max-w-md">
-          <div className="rounded-2xl border border-border bg-surface p-8 sm:p-10">
+    <section className="flex-1 flex items-center justify-center px-4">
+      <div className="mx-auto max-w-md w-full">
+        <div className="rounded-2xl border border-border bg-surface p-8 sm:p-10">
           <span className="inline-block text-xs font-semibold uppercase tracking-[0.2em] text-accent-cyan mb-3">
             Admin Access
           </span>
@@ -59,7 +53,7 @@ export default function AdminLoginPage() {
           </p>
 
           {error ? (
-            <div className="rounded-xl border border-red-200 bg-red-50 p-3 text-sm text-red-700 mb-5">
+            <div className="rounded-xl border border-red-900/30 bg-red-900/20 p-3 text-sm text-red-300 mb-5">
               {error}
             </div>
           ) : null}
@@ -101,9 +95,8 @@ export default function AdminLoginPage() {
             </button>
           </form>
 
-          </div>
         </div>
-      </section>
-    </>
+      </div>
+    </section>
   );
 }

@@ -11,5 +11,5 @@ export default function AdminLayout({
 }: {
   children: React.ReactNode;
 }) {
-  return <div className="admin-theme">{children}</div>;
+  return <div className="admin-layout">{children}</div>;
 }

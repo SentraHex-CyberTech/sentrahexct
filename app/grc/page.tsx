@@ -65,50 +65,90 @@ export default function GRCPage() {
             <p className="label mb-4">Our Services</p>
             <h2 className="text-3xl font-bold text-text-primary sm:text-4xl leading-tight">Management systems for today&apos;s obligations.</h2>
           </div>
-          <div className="grid gap-6 md:grid-cols-3">
-            <div className="card p-7 flex flex-col">
-              <div className="mb-5">
-                <p className="label mb-2">ISMS</p>
-                <div className="text-xs text-text-muted mb-4">ISO/IEC 27001</div>
-                <h3 className="text-xl font-bold text-text-primary mb-3">Information Security Management System</h3>
-                <p className="text-sm text-text-secondary leading-relaxed">Gap assessment, risk assessment, policy development, control implementation, internal audit support and certification readiness for ISO/IEC 27001.</p>
-              </div>
-              <div className="mt-auto pt-4 border-t border-border">
-                <Link href="/grc/isms" className="inline-flex items-center gap-1.5 text-sm font-medium text-accent hover:underline">
-                  Learn more
-                  <svg className="h-3.5 w-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="2"><path strokeLinecap="round" strokeLinejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3" /></svg>
-                </Link>
-              </div>
-            </div>
-            <div className="card p-7 flex flex-col">
-              <div className="mb-5">
-                <p className="label mb-2">AIMS</p>
-                <div className="text-xs text-text-muted mb-4">ISO/IEC 42001</div>
-                <h3 className="text-xl font-bold text-text-primary mb-3">AI Management System</h3>
-                <p className="text-sm text-text-secondary leading-relaxed">Establish responsible AI governance: AI system inventory, risk management, policies, lifecycle governance and implementation support aligned with ISO/IEC 42001.</p>
-              </div>
-              <div className="mt-auto pt-4 border-t border-border">
-                <Link href="/grc/aims" className="inline-flex items-center gap-1.5 text-sm font-medium text-accent hover:underline">
-                  Learn more
-                  <svg className="h-3.5 w-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="2"><path strokeLinecap="round" strokeLinejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3" /></svg>
-                </Link>
-              </div>
-            </div>
-            <div className="card p-7 flex flex-col opacity-60">
-              <div className="mb-5">
-                <div className="flex items-center gap-2 mb-2">
-                  <p className="label">PIMS</p>
-                  <span className="badge-soon">Coming Soon</span>
+          
+          {/* ISO Standards Section */}
+          <div className="mb-12">
+            <h3 className="text-lg font-bold text-text-primary mb-6">International Standards</h3>
+            <div className="grid gap-6 md:grid-cols-3">
+              <div className="card p-7 flex flex-col">
+                <div className="mb-5">
+                  <p className="label mb-2">ISMS</p>
+                  <div className="text-xs text-text-muted mb-4">ISO/IEC 27001</div>
+                  <h3 className="text-xl font-bold text-text-primary mb-3">Information Security Management System</h3>
+                  <p className="text-sm text-text-secondary leading-relaxed">Gap assessment, risk assessment, policy development, control implementation, internal audit support and certification readiness for ISO/IEC 27001.</p>
                 </div>
-                <div className="text-xs text-text-muted mb-4">ISO/IEC 27701</div>
-                <h3 className="text-xl font-bold text-text-primary mb-3">Privacy Information Management System</h3>
-                <p className="text-sm text-text-secondary leading-relaxed">An extension of ISO/IEC 27001 to include privacy management. SentraHex is expanding its GRC practice to include ISO/IEC 27701-aligned PIMS implementation.</p>
+                <div className="mt-auto pt-4 border-t border-border">
+                  <Link href="/grc/isms" className="inline-flex items-center gap-1.5 text-sm font-medium text-accent hover:underline">
+                    Learn more
+                    <svg className="h-3.5 w-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="2"><path strokeLinecap="round" strokeLinejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3" /></svg>
+                  </Link>
+                </div>
               </div>
-              <div className="mt-auto pt-4 border-t border-border">
-                <Link href="/grc/pims" className="inline-flex items-center gap-1.5 text-sm font-medium text-text-muted">
-                  Learn more
-                  <svg className="h-3.5 w-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="2"><path strokeLinecap="round" strokeLinejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3" /></svg>
-                </Link>
+              <div className="card p-7 flex flex-col">
+                <div className="mb-5">
+                  <p className="label mb-2">AIMS</p>
+                  <div className="text-xs text-text-muted mb-4">ISO/IEC 42001</div>
+                  <h3 className="text-xl font-bold text-text-primary mb-3">AI Management System</h3>
+                  <p className="text-sm text-text-secondary leading-relaxed">Establish responsible AI governance: AI system inventory, risk management, policies, lifecycle governance and implementation support aligned with ISO/IEC 42001.</p>
+                </div>
+                <div className="mt-auto pt-4 border-t border-border">
+                  <Link href="/grc/aims" className="inline-flex items-center gap-1.5 text-sm font-medium text-accent hover:underline">
+                    Learn more
+                    <svg className="h-3.5 w-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="2"><path strokeLinecap="round" strokeLinejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3" /></svg>
+                  </Link>
+                </div>
+              </div>
+              <div className="card p-7 flex flex-col opacity-60">
+                <div className="mb-5">
+                  <div className="flex items-center gap-2 mb-2">
+                    <p className="label">PIMS</p>
+                    <span className="badge-soon">Coming Soon</span>
+                  </div>
+                  <div className="text-xs text-text-muted mb-4">ISO/IEC 27701</div>
+                  <h3 className="text-xl font-bold text-text-primary mb-3">Privacy Information Management System</h3>
+                  <p className="text-sm text-text-secondary leading-relaxed">An extension of ISO/IEC 27001 to include privacy management. SentraHex is expanding its GRC practice to include ISO/IEC 27701-aligned PIMS implementation.</p>
+                </div>
+                <div className="mt-auto pt-4 border-t border-border">
+                  <Link href="/grc/pims" className="inline-flex items-center gap-1.5 text-sm font-medium text-text-muted">
+                    Learn more
+                    <svg className="h-3.5 w-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="2"><path strokeLinecap="round" strokeLinejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3" /></svg>
+                  </Link>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          {/* India Compliance & Support Section */}
+          <div>
+            <h3 className="text-lg font-bold text-text-primary mb-6">India-Specific Compliance & GRC Support</h3>
+            <div className="grid gap-6 md:grid-cols-2">
+              <div className="card p-7 flex flex-col">
+                <div className="mb-5">
+                  <p className="label mb-2">DPDPA</p>
+                  <div className="text-xs text-text-muted mb-4">Data Protection Compliance</div>
+                  <h3 className="text-xl font-bold text-text-primary mb-3">DPDPA Compliance</h3>
+                  <p className="text-sm text-text-secondary leading-relaxed">Implement the Digital Personal Data Protection Act (DPDPA) 2023: gap assessment, data protection frameworks, technical controls, data mapping, and accountability documentation for India-based organizations.</p>
+                </div>
+                <div className="mt-auto pt-4 border-t border-border">
+                  <Link href="/grc/dpdpa" className="inline-flex items-center gap-1.5 text-sm font-medium text-accent hover:underline">
+                    Learn more
+                    <svg className="h-3.5 w-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="2"><path strokeLinecap="round" strokeLinejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3" /></svg>
+                  </Link>
+                </div>
+              </div>
+              <div className="card p-7 flex flex-col">
+                <div className="mb-5">
+                  <p className="label mb-2">Policy Development</p>
+                  <div className="text-xs text-text-muted mb-4">Governance & Compliance</div>
+                  <h3 className="text-xl font-bold text-text-primary mb-3">Policy Creation & Development</h3>
+                  <p className="text-sm text-text-secondary leading-relaxed">Custom policies for ISO 27001, ISO 42001, DPDPA, and other compliance standards. Practical, actionable policies tailored to your organization that actually guide your teams.</p>
+                </div>
+                <div className="mt-auto pt-4 border-t border-border">
+                  <Link href="/grc/policies" className="inline-flex items-center gap-1.5 text-sm font-medium text-accent hover:underline">
+                    Learn more
+                    <svg className="h-3.5 w-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="2"><path strokeLinecap="round" strokeLinejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3" /></svg>
+                  </Link>
+                </div>
               </div>
             </div>
           </div>
