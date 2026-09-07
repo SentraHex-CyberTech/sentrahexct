@@ -5,6 +5,13 @@ export const metadata: Metadata = {
   title: "DPDPA Compliance | Data Protection Act India | SentraHex CyberTech",
   description: "Implement the Digital Personal Data Protection Act (DPDPA) for your organization. DPDPA compliance support, data protection frameworks, and privacy governance for India.",
   keywords: ["DPDPA", "Data Protection", "India", "Privacy Act", "Personal Data", "Compliance"],
+  alternates: { canonical: "/grc/dpdpa" },
+  openGraph: {
+    title: "DPDPA Compliance | Data Protection Act India",
+    description: "DPDPA compliance support, data protection frameworks, and privacy governance for organizations in India.",
+    url: "/grc/dpdpa",
+    type: "website",
+  },
 };
 
 export default function DPDPAPage() {

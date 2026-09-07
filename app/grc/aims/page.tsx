@@ -4,6 +4,13 @@ import Link from "next/link";
 export const metadata: Metadata = {
   title: "AIMS ISO/IEC 42001 AI Governance",
   description: "SentraHex helps organizations establish an ISO/IEC 42001-aligned AI Management System. Practical AI governance: inventory, risk management, policies, lifecycle controls.",
+  alternates: { canonical: "/grc/aims" },
+  openGraph: {
+    title: "AIMS ISO/IEC 42001 AI Governance",
+    description: "Practical AI governance and ISO/IEC 42001-aligned AI Management System implementation support.",
+    url: "/grc/aims",
+    type: "website",
+  },
 };
 
 export default function AIMSPage() {
