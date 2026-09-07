@@ -4,6 +4,13 @@ import Link from "next/link";
 export const metadata: Metadata = {
   title: "ISMS ISO/IEC 27001 Implementation",
   description: "SentraHex helps organizations implement an ISO/IEC 27001-aligned Information Security Management System: gap assessment, risk treatment, policy development, and certification readiness.",
+  alternates: { canonical: "/grc/isms" },
+  openGraph: {
+    title: "ISMS ISO/IEC 27001 Implementation",
+    description: "ISO/IEC 27001-aligned ISMS implementation, risk treatment, policy development, and certification readiness support.",
+    url: "/grc/isms",
+    type: "website",
+  },
 };
 
 export default function ISMSPage() {
