@@ -53,7 +53,15 @@ export const metadata: Metadata = {
     siteName: "SentraHex CyberTech",
     title: "SentraHex CyberTech | GRC Consulting in India | ISO 27001 & AI Governance",
     description: "Practical governance, risk, compliance, and digital solutions for businesses navigating information security, AI governance, and data protection in India.",
-    images: [{ url: "/og-image.svg", width: 1200, height: 630, alt: "SentraHex CyberTech" }],
+    images: [
+      {
+        url: "https://sentrahexct.in/og-image.png",
+        width: 1200,
+        height: 630,
+        type: "image/png",
+        alt: "SentraHex CyberTech - Build. Govern. Comply.",
+      },
+    ],
   },
   twitter: {
     card: "summary_large_image",
@@ -61,7 +69,7 @@ export const metadata: Metadata = {
     creator: "@sentrahexct",
     title: "SentraHex CyberTech | GRC Consulting in India",
     description: "ISO 27001, ISO 42001, DPDPA compliance, and professional website development support for modern organizations.",
-    images: ["/og-image.svg"],
+    images: ["https://sentrahexct.in/og-image.png"],
   },
   icons: {
     icon: [{ url: "/favicon.ico" }],
